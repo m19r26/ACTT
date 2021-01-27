@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name DACAP-var2.2-rescue)(type Legacy)(uri ${KIPRJMOD}/DACAP-var2.2-rescue.lib)(options "")(descr ""))
+  (lib (name DACAP-ver2.2-rescue)(type Legacy)(uri ${KIPRJMOD}/DACAP-ver2.2-rescue.lib)(options "")(descr ""))
+)

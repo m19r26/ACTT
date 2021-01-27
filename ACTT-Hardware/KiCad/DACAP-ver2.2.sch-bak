@@ -1,0 +1,2206 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "DACAP"
+Date "2019-11-20"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MD&SubCPU-ver2.0-rescue:IPD50R380CE-Transistor_FET Q1
+U 1 1 5C88C75E
+P 6050 5050
+F 0 "Q1" H 6256 5004 50  0000 L CNN
+F 1 "IPD30N03S2L20ATMA1CT-ND" V 6400 4350 39  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 6250 4975 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-IPD50R380CE-DS-v02_01-en.pdf?fileId=db3a30433ecb86d4013ed0a2ef580f38" H 5850 5350 50  0001 L CNN
+	1    6050 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:CP-Device C3
+U 1 1 5C88C86B
+P 5950 5500
+F 0 "C3" H 5750 5600 50  0000 L CNN
+F 1 "220uF" H 5700 5400 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 5988 5350 50  0001 C CNN
+F 3 "~" H 5950 5500 50  0001 C CNN
+	1    5950 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C6
+U 1 1 5CA9B6CA
+P 8500 5650
+F 0 "C6" H 8550 5700 50  0000 L CNN
+F 1 "0.1uF" H 8550 5550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8500 5650 50  0001 C CNN
+F 3 "~" H 8500 5650 50  0001 C CNN
+	1    8500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R12
+U 1 1 5CA9B805
+P 8300 5450
+F 0 "R12" V 8400 5400 50  0000 L CNN
+F 1 "10k" V 8300 5400 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8230 5450 50  0001 C CNN
+F 3 "~" H 8300 5450 50  0001 C CNN
+	1    8300 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R13
+U 1 1 5CA9C4B8
+P 8100 5650
+F 0 "R13" V 8200 5600 50  0000 L CNN
+F 1 "1k" V 8100 5600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8030 5650 50  0001 C CNN
+F 3 "~" H 8100 5650 50  0001 C CNN
+	1    8100 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 5500 8100 5450
+Wire Wire Line
+	8450 5450 8500 5450
+Wire Wire Line
+	8500 5450 8500 5550
+Wire Wire Line
+	8500 5750 8500 5800
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0101
+U 1 1 5CA9DF33
+P 7350 5950
+F 0 "#PWR0101" H 7350 5700 50  0001 C CNN
+F 1 "GND" H 7355 5777 50  0000 C CNN
+F 2 "" H 7350 5950 50  0001 C CNN
+F 3 "" H 7350 5950 50  0001 C CNN
+	1    7350 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5950 7350 5950
+Connection ~ 7350 5950
+Wire Wire Line
+	7350 5950 7450 5950
+Wire Wire Line
+	8100 5800 8300 5800
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0102
+U 1 1 5CAA002D
+P 8300 5800
+F 0 "#PWR0102" H 8300 5550 50  0001 C CNN
+F 1 "GND" H 8305 5627 50  0000 C CNN
+F 2 "" H 8300 5800 50  0001 C CNN
+F 3 "" H 8300 5800 50  0001 C CNN
+	1    8300 5800
+	1    0    0    -1  
+$EndComp
+Connection ~ 8300 5800
+Wire Wire Line
+	8300 5800 8500 5800
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R7
+U 1 1 5CAA0A38
+P 6500 4250
+F 0 "R7" V 6600 4200 50  0000 L CNN
+F 1 "1k" V 6500 4200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 4250 50  0001 C CNN
+F 3 "~" H 6500 4250 50  0001 C CNN
+	1    6500 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R9
+U 1 1 5CAA0AAE
+P 6500 4650
+F 0 "R9" V 6600 4600 50  0000 L CNN
+F 1 "1k" V 6500 4600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 4650 50  0001 C CNN
+F 3 "~" H 6500 4650 50  0001 C CNN
+	1    6500 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R11
+U 1 1 5CAA420B
+P 6350 4800
+F 0 "R11" V 6450 4750 50  0000 L CNN
+F 1 "10k" V 6350 4750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6280 4800 50  0001 C CNN
+F 3 "~" H 6350 4800 50  0001 C CNN
+	1    6350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0103
+U 1 1 5CAA6340
+P 6200 5700
+F 0 "#PWR0103" H 6200 5450 50  0001 C CNN
+F 1 "GND" H 6205 5527 50  0000 C CNN
+F 2 "" H 6200 5700 50  0001 C CNN
+F 3 "" H 6200 5700 50  0001 C CNN
+	1    6200 5700
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 4650
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C5
+U 1 1 5CAA9BB7
+P 6200 5500
+F 0 "C5" H 6050 5600 50  0000 L CNN
+F 1 "0.1uF" H 6000 5400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6200 5500 50  0001 C CNN
+F 3 "~" H 6200 5500 50  0001 C CNN
+	1    6200 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5250 5950 5300
+Connection ~ 5950 5300
+Wire Wire Line
+	5950 5300 5950 5350
+Wire Wire Line
+	5950 5300 6200 5300
+Wire Wire Line
+	6200 5300 6200 5400
+Wire Wire Line
+	6200 5600 6200 5700
+Wire Wire Line
+	6350 4950 6350 5700
+Wire Wire Line
+	6200 5700 6350 5700
+Wire Wire Line
+	5950 5650 5950 5700
+Wire Wire Line
+	5950 5700 6200 5700
+Connection ~ 6200 5700
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R8
+U 1 1 5CAB9F61
+P 6500 4450
+F 0 "R8" V 6600 4400 50  0000 L CNN
+F 1 "1k" V 6500 4400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 4450 50  0001 C CNN
+F 3 "~" H 6500 4450 50  0001 C CNN
+	1    6500 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R4
+U 1 1 5CABA0C9
+P 8100 3850
+F 0 "R4" V 8150 3950 50  0000 L CNN
+F 1 "2.2k" V 8100 3800 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8030 3850 50  0001 C CNN
+F 3 "~" H 8100 3850 50  0001 C CNN
+	1    8100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R5
+U 1 1 5CABA82C
+P 8200 3850
+F 0 "R5" V 8250 3950 50  0000 L CNN
+F 1 "2.2k" V 8200 3800 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8130 3850 50  0001 C CNN
+F 3 "~" H 8200 3850 50  0001 C CNN
+	1    8200 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4050 8200 4050
+Wire Wire Line
+	8050 4250 8100 4250
+Wire Wire Line
+	8100 4000 8100 4250
+Connection ~ 8100 4250
+Wire Wire Line
+	8200 4000 8200 4050
+Connection ~ 8200 4050
+Wire Wire Line
+	8100 3700 8100 3600
+Wire Wire Line
+	8100 3600 8150 3600
+Wire Wire Line
+	8200 3600 8200 3700
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0104
+U 1 1 5CAC4F7A
+P 8150 3600
+F 0 "#PWR0104" H 8150 3450 50  0001 C CNN
+F 1 "+3.3V" H 8165 3773 50  0000 C CNN
+F 2 "" H 8150 3600 50  0001 C CNN
+F 3 "" H 8150 3600 50  0001 C CNN
+	1    8150 3600
+	1    0    0    -1  
+$EndComp
+Connection ~ 8150 3600
+Wire Wire Line
+	8150 3600 8200 3600
+Connection ~ 8500 5450
+Wire Wire Line
+	8050 5450 8100 5450
+Connection ~ 8100 5450
+Wire Wire Line
+	8100 5450 8150 5450
+Wire Wire Line
+	3200 6850 2800 6850
+Wire Wire Line
+	2900 6750 3200 6750
+Wire Wire Line
+	2900 7100 2900 6750
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x04_Female-Connector J2
+U 1 1 5CB9321C
+P 3400 6850
+F 0 "J2" H 3428 6826 50  0000 L CNN
+F 1 "ST-I2C" H 3100 6550 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_S04B-EH_1x04_P2.50mm_Horizontal" H 3400 6850 50  0001 C CNN
+F 3 "~" H 3400 6850 50  0001 C CNN
+	1    3400 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0119
+U 1 1 5CB90DF9
+P 2800 6850
+F 0 "#PWR0119" H 2800 6700 50  0001 C CNN
+F 1 "+3.3V" H 2815 7023 50  0000 C CNN
+F 2 "" H 2800 6850 50  0001 C CNN
+F 3 "" H 2800 6850 50  0001 C CNN
+	1    2800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0120
+U 1 1 5CAFAE10
+P 6150 1100
+F 0 "#PWR0120" H 6150 850 50  0001 C CNN
+F 1 "GND" H 6155 927 50  0000 C CNN
+F 2 "" H 6150 1100 50  0001 C CNN
+F 3 "" H 6150 1100 50  0001 C CNN
+	1    6150 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0121
+U 1 1 5CAFA9AE
+P 5850 1100
+F 0 "#PWR0121" H 5850 850 50  0001 C CNN
+F 1 "GND" H 5855 927 50  0000 C CNN
+F 2 "" H 5850 1100 50  0001 C CNN
+F 3 "" H 5850 1100 50  0001 C CNN
+	1    5850 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0122
+U 1 1 5CAFA6BC
+P 6150 900
+F 0 "#PWR0122" H 6150 750 50  0001 C CNN
+F 1 "+3.3V" H 6165 1073 50  0000 C CNN
+F 2 "" H 6150 900 50  0001 C CNN
+F 3 "" H 6150 900 50  0001 C CNN
+	1    6150 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0123
+U 1 1 5CAFA00F
+P 5850 900
+F 0 "#PWR0123" H 5850 750 50  0001 C CNN
+F 1 "+3.3V" H 5865 1073 50  0000 C CNN
+F 2 "" H 5850 900 50  0001 C CNN
+F 3 "" H 5850 900 50  0001 C CNN
+	1    5850 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C2
+U 1 1 5CAF9BEF
+P 6150 1000
+F 0 "C2" H 5950 1000 50  0000 L CNN
+F 1 "0.1uF" H 5900 900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6150 1000 50  0001 C CNN
+F 3 "~" H 6150 1000 50  0001 C CNN
+	1    6150 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C1
+U 1 1 5CAF97C4
+P 5850 1000
+F 0 "C1" H 5650 1000 50  0000 L CNN
+F 1 "0.1uF" H 5600 900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5850 1000 50  0001 C CNN
+F 3 "~" H 5850 1000 50  0001 C CNN
+	1    5850 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 6750 1100 7450
+Wire Wire Line
+	1150 6750 1100 6750
+Wire Wire Line
+	950  6850 1150 6850
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0124
+U 1 1 5CACE532
+P 950 6850
+F 0 "#PWR0124" H 950 6700 50  0001 C CNN
+F 1 "+3.3V" H 965 7023 50  0000 C CNN
+F 2 "" H 950 6850 50  0001 C CNN
+F 3 "" H 950 6850 50  0001 C CNN
+	1    950  6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0125
+U 1 1 5CACE1D3
+P 1100 7450
+F 0 "#PWR0125" H 1100 7200 50  0001 C CNN
+F 1 "GND" H 1105 7277 50  0000 C CNN
+F 2 "" H 1100 7450 50  0001 C CNN
+F 3 "" H 1100 7450 50  0001 C CNN
+	1    1100 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x07_Female-Connector J5
+U 1 1 5CAC5494
+P 1350 7050
+F 0 "J5" H 1377 7076 50  0000 L CNN
+F 1 "ST-Link" H 1377 6985 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_S07B-EH_1x07_P2.50mm_Horizontal" H 1350 7050 50  0001 C CNN
+F 3 "~" H 1350 7050 50  0001 C CNN
+	1    1350 7050
+	1    0    0    -1  
+$EndComp
+Connection ~ 10250 1850
+Wire Wire Line
+	10250 1850 10300 1850
+Wire Wire Line
+	10250 1900 10250 1850
+Wire Wire Line
+	9500 1850 10250 1850
+Connection ~ 10250 2250
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0127
+U 1 1 5CA948AE
+P 10250 2250
+F 0 "#PWR0127" H 10250 2000 50  0001 C CNN
+F 1 "GND" H 10350 2150 50  0000 C CNN
+F 2 "" H 10250 2250 50  0001 C CNN
+F 3 "" H 10250 2250 50  0001 C CNN
+	1    10250 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 2250 10250 2200
+Wire Wire Line
+	10400 2250 10250 2250
+Wire Wire Line
+	10400 2050 10400 2250
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R6
+U 1 1 5CA9331A
+P 10450 1850
+F 0 "R6" V 10550 1800 50  0000 L CNN
+F 1 "1k" V 10450 1800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10380 1850 50  0001 C CNN
+F 3 "~" H 10450 1850 50  0001 C CNN
+	1    10450 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0128
+U 1 1 5CA932EB
+P 10600 1850
+F 0 "#PWR0128" H 10600 1700 50  0001 C CNN
+F 1 "+3.3V" H 10615 2023 50  0000 C CNN
+F 2 "" H 10600 1850 50  0001 C CNN
+F 3 "" H 10600 1850 50  0001 C CNN
+	1    10600 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R_POT-Device RV1
+U 1 1 5CA92A7A
+P 10250 2050
+F 0 "RV1" V 10350 1950 50  0000 C CNN
+F 1 "50k" V 10250 2050 50  0000 C CNN
+F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YL_Vertical" H 10250 2050 50  0001 C CNN
+F 3 "~" H 10250 2050 50  0001 C CNN
+	1    10250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 950  9000 900 
+Connection ~ 9000 950 
+Wire Wire Line
+	9100 950  9000 950 
+Wire Wire Line
+	8900 950  9000 950 
+Wire Wire Line
+	8050 1550 8100 1550
+Wire Wire Line
+	8050 1450 8050 1550
+Connection ~ 8950 2900
+Wire Wire Line
+	9000 2900 8950 2900
+Wire Wire Line
+	9000 2900 9000 2850
+Wire Wire Line
+	8900 2900 8950 2900
+Wire Wire Line
+	8900 2850 8900 2900
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0129
+U 1 1 5CA90999
+P 8950 2900
+F 0 "#PWR0129" H 8950 2650 50  0001 C CNN
+F 1 "GND" H 8955 2727 50  0000 C CNN
+F 2 "" H 8950 2900 50  0001 C CNN
+F 3 "" H 8950 2900 50  0001 C CNN
+	1    8950 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8050 1150
+Wire Wire Line
+	8050 1150 8100 1150
+Wire Wire Line
+	6400 2450 6400 1950
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0130
+U 1 1 5CA8B83A
+P 6400 2450
+F 0 "#PWR0130" H 6400 2200 50  0001 C CNN
+F 1 "GND" H 6405 2277 50  0000 C CNN
+F 2 "" H 6400 2450 50  0001 C CNN
+F 3 "" H 6400 2450 50  0001 C CNN
+	1    6400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0131
+U 1 1 5CA8B2A0
+P 9000 900
+F 0 "#PWR0131" H 9000 750 50  0001 C CNN
+F 1 "+3.3V" H 9015 1073 50  0000 C CNN
+F 2 "" H 9000 900 50  0001 C CNN
+F 3 "" H 9000 900 50  0001 C CNN
+	1    9000 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C4
+U 1 1 5CA8B1F0
+P 8050 1350
+F 0 "C4" H 8050 1400 50  0000 L CNN
+F 1 "0.1uF" H 7850 1250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8050 1350 50  0001 C CNN
+F 3 "~" H 8050 1350 50  0001 C CNN
+	1    8050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0132
+U 1 1 5CA8AF1B
+P 7550 1550
+F 0 "#PWR0132" H 7550 1300 50  0001 C CNN
+F 1 "GND" H 7555 1377 50  0000 C CNN
+F 2 "" H 7550 1550 50  0001 C CNN
+F 3 "" H 7550 1550 50  0001 C CNN
+	1    7550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R3
+U 1 1 5CA8AA85
+P 8250 1550
+F 0 "R3" V 8350 1500 50  0000 L CNN
+F 1 "1k" V 8250 1500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8180 1550 50  0001 C CNN
+F 3 "~" H 8250 1550 50  0001 C CNN
+	1    8250 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R1
+U 1 1 5C88C1AF
+P 8250 1150
+F 0 "R1" V 8350 1100 50  0000 L CNN
+F 1 "100" V 8250 1100 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8180 1150 50  0001 C CNN
+F 3 "~" H 8250 1150 50  0001 C CNN
+	1    8250 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Speaker-Device LS1
+U 1 1 5C88BE64
+P 6850 950
+F 0 "LS1" H 7019 946 50  0000 L CNN
+F 1 "PKM13EPYH4000-A0" H 6450 1150 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_TDK_PS1240P02BT_D12.2mm_H6.5mm" H 6850 750 50  0001 C CNN
+F 3 "~" H 6840 900 50  0001 C CNN
+	1    6850 950 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:SW_Coded_SH-7010-Switch SW1
+U 1 1 5C88BBFA
+P 5950 2150
+F 0 "SW1" H 6005 2617 50  0000 C CNN
+F 1 "CT3073-1-ND" H 6005 2526 50  0000 C CNN
+F 2 "Button_Switch_SMD:Nidec_Copal_SH-7010B" H 5650 1700 50  0001 L CNN
+F 3 "https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf" H 5950 2150 50  0001 C CNN
+	1    5950 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:STM32F303K8Tx-MCU_ST_STM32F3 U2
+U 1 1 5C88B9E2
+P 9000 1850
+F 0 "U2" H 9400 900 50  0000 C CNN
+F 1 "STM32F303K8T6" H 9400 800 50  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 8500 950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00092070.pdf" H 9000 1850 50  0001 C CNN
+	1    9000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J1
+U 1 1 5CC84666
+P 1950 1850
+F 0 "J1" H 2000 1600 50  0000 C CNN
+F 1 "Battery" H 2000 1650 50  0000 C CNN
+F 2 "zisaku:Ultra_male" H 1950 1850 50  0001 C CNN
+F 3 "~" H 1950 1850 50  0001 C CNN
+	1    1950 1850
+	1    0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:VCC-power #PWR0133
+U 1 1 5CC8E03C
+P 3500 1750
+F 0 "#PWR0133" H 3500 1600 50  0001 C CNN
+F 1 "VCC" H 3517 1923 50  0000 C CNN
+F 2 "" H 3500 1750 50  0001 C CNN
+F 3 "" H 3500 1750 50  0001 C CNN
+	1    3500 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0134
+U 1 1 5CC93163
+P 1750 1850
+F 0 "#PWR0134" H 1750 1600 50  0001 C CNN
+F 1 "GND" H 1755 1677 50  0000 C CNN
+F 2 "" H 1750 1850 50  0001 C CNN
+F 3 "" H 1750 1850 50  0001 C CNN
+	1    1750 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+8V-power #PWR0135
+U 1 1 5CC9BD4A
+P 5950 4850
+F 0 "#PWR0135" H 5950 4700 50  0001 C CNN
+F 1 "+8V" H 5965 5023 50  0000 C CNN
+F 2 "" H 5950 4850 50  0001 C CNN
+F 3 "" H 5950 4850 50  0001 C CNN
+	1    5950 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+BATT-power #PWR0138
+U 1 1 5CCAE56B
+P 1750 1750
+F 0 "#PWR0138" H 1750 1600 50  0001 C CNN
+F 1 "+BATT" H 1765 1923 50  0000 C CNN
+F 2 "" H 1750 1750 50  0001 C CNN
+F 3 "" H 1750 1750 50  0001 C CNN
+	1    1750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D5
+U 1 1 5CB1969A
+P 3800 2200
+F 0 "D5" V 3800 2350 50  0000 R CNN
+F 1 "VCC" V 3700 2350 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3800 2200 50  0001 C CNN
+F 3 "~" H 3800 2200 50  0001 C CNN
+	1    3800 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0149
+U 1 1 5CB19746
+P 3800 2350
+F 0 "#PWR0149" H 3800 2100 50  0001 C CNN
+F 1 "GND" H 3805 2177 50  0000 C CNN
+F 2 "" H 3800 2350 50  0001 C CNN
+F 3 "" H 3800 2350 50  0001 C CNN
+	1    3800 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:VCC-power #PWR0150
+U 1 1 5CB34620
+P 3800 1750
+F 0 "#PWR0150" H 3800 1600 50  0001 C CNN
+F 1 "VCC" H 3817 1923 50  0000 C CNN
+F 2 "" H 3800 1750 50  0001 C CNN
+F 3 "" H 3800 1750 50  0001 C CNN
+	1    3800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D6
+U 1 1 5CB34B8B
+P 4050 2200
+F 0 "D6" V 4050 2350 50  0000 R CNN
+F 1 "+8V" V 3950 2350 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4050 2200 50  0001 C CNN
+F 3 "~" H 4050 2200 50  0001 C CNN
+	1    4050 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0151
+U 1 1 5CB34B92
+P 4050 2350
+F 0 "#PWR0151" H 4050 2100 50  0001 C CNN
+F 1 "GND" H 4055 2177 50  0000 C CNN
+F 2 "" H 4050 2350 50  0001 C CNN
+F 3 "" H 4050 2350 50  0001 C CNN
+	1    4050 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+8V-power #PWR0152
+U 1 1 5CB3A16F
+P 4050 1750
+F 0 "#PWR0152" H 4050 1600 50  0001 C CNN
+F 1 "+8V" H 4065 1923 50  0000 C CNN
+F 2 "" H 4050 1750 50  0001 C CNN
+F 3 "" H 4050 1750 50  0001 C CNN
+	1    4050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D8
+U 1 1 5CB3A2B4
+P 4550 2200
+F 0 "D8" V 4550 2350 50  0000 R CNN
+F 1 "+3V3" V 4450 2350 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4550 2200 50  0001 C CNN
+F 3 "~" H 4550 2200 50  0001 C CNN
+	1    4550 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0153
+U 1 1 5CB3A2BB
+P 4550 2350
+F 0 "#PWR0153" H 4550 2100 50  0001 C CNN
+F 1 "GND" H 4555 2177 50  0000 C CNN
+F 2 "" H 4550 2350 50  0001 C CNN
+F 3 "" H 4550 2350 50  0001 C CNN
+	1    4550 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0154
+U 1 1 5CB44E35
+P 4550 1750
+F 0 "#PWR0154" H 4550 1600 50  0001 C CNN
+F 1 "+3.3V" H 4565 1923 50  0000 C CNN
+F 2 "" H 4550 1750 50  0001 C CNN
+F 3 "" H 4550 1750 50  0001 C CNN
+	1    4550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D7
+U 1 1 5CB44ECE
+P 4300 2200
+F 0 "D7" V 4300 2350 50  0000 R CNN
+F 1 "+5V" V 4200 2350 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4300 2200 50  0001 C CNN
+F 3 "~" H 4300 2200 50  0001 C CNN
+	1    4300 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0155
+U 1 1 5CB44ED5
+P 4300 2350
+F 0 "#PWR0155" H 4300 2100 50  0001 C CNN
+F 1 "GND" H 4305 2177 50  0000 C CNN
+F 2 "" H 4300 2350 50  0001 C CNN
+F 3 "" H 4300 2350 50  0001 C CNN
+	1    4300 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+5V-power #PWR0156
+U 1 1 5CB4A4B6
+P 4300 1750
+F 0 "#PWR0156" H 4300 1600 50  0001 C CNN
+F 1 "+5V" H 4315 1923 50  0000 C CNN
+F 2 "" H 4300 1750 50  0001 C CNN
+F 3 "" H 4300 1750 50  0001 C CNN
+	1    4300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J12
+U 1 1 5CB6AE8D
+P 10000 1150
+F 0 "J12" V 9940 962 50  0000 R CNN
+F 1 "Motor-ONOFF" V 10050 1200 50  0000 R CNN
+F 2 "Connector_JST:JST_EH_S02B-EH_1x02_P2.50mm_Horizontal" H 10000 1150 50  0001 C CNN
+F 3 "~" H 10000 1150 50  0001 C CNN
+	1    10000 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R17
+U 1 1 5CB81DD7
+P 10100 2050
+F 0 "R17" V 10050 1800 50  0000 L CNN
+F 1 "2.2k" V 10100 2000 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10030 2050 50  0001 C CNN
+F 3 "~" H 10100 2050 50  0001 C CNN
+	1    10100 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 1450 10000 1450
+Connection ~ 10000 1450
+Wire Wire Line
+	10000 1450 10000 1350
+Wire Wire Line
+	10100 2200 10100 2250
+Wire Wire Line
+	10100 2250 10250 2250
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R18
+U 1 1 5CB0186B
+P 3800 1900
+F 0 "R18" V 3900 1850 50  0000 L CNN
+F 1 "680" V 3800 1850 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3730 1900 50  0001 C CNN
+F 3 "~" H 3800 1900 50  0001 C CNN
+	1    3800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R19
+U 1 1 5CB01FC7
+P 4050 1900
+F 0 "R19" V 4150 1850 50  0000 L CNN
+F 1 "680" V 4050 1850 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3980 1900 50  0001 C CNN
+F 3 "~" H 4050 1900 50  0001 C CNN
+	1    4050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R20
+U 1 1 5CB022B7
+P 4300 1900
+F 0 "R20" V 4400 1850 50  0000 L CNN
+F 1 "100" V 4300 1850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4230 1900 50  0001 C CNN
+F 3 "~" H 4300 1900 50  0001 C CNN
+	1    4300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R21
+U 1 1 5CB02578
+P 4550 1900
+F 0 "R21" V 4650 1850 50  0000 L CNN
+F 1 "100" V 4550 1850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4480 1900 50  0001 C CNN
+F 3 "~" H 4550 1900 50  0001 C CNN
+	1    4550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:VCC-power #PWR0157
+U 1 1 5CBB6AC9
+P 4000 6750
+F 0 "#PWR0157" H 4000 6600 50  0001 C CNN
+F 1 "VCC" H 4017 6923 50  0000 C CNN
+F 2 "" H 4000 6750 50  0001 C CNN
+F 3 "" H 4000 6750 50  0001 C CNN
+	1    4000 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J13
+U 1 1 5CBB6029
+P 4200 6850
+F 0 "J13" H 4300 6700 50  0000 C CNN
+F 1 "Servo-ONOFF" H 4500 6800 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S02B-EH_1x02_P2.50mm_Horizontal" H 4200 6850 50  0001 C CNN
+F 3 "~" H 4200 6850 50  0001 C CNN
+	1    4200 6850
+	1    0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0148
+U 1 1 5CB13B67
+P 7050 1100
+F 0 "#PWR0148" H 7050 850 50  0001 C CNN
+F 1 "GND" H 7055 927 50  0000 C CNN
+F 2 "" H 7050 1100 50  0001 C CNN
+F 3 "" H 7050 1100 50  0001 C CNN
+	1    7050 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0147
+U 1 1 5CB00C98
+P 5950 6750
+F 0 "#PWR0147" H 5950 6600 50  0001 C CNN
+F 1 "+3.3V" H 5965 6923 50  0000 C CNN
+F 2 "" H 5950 6750 50  0001 C CNN
+F 3 "" H 5950 6750 50  0001 C CNN
+	1    5950 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0146
+U 1 1 5CB00C10
+P 5950 6850
+F 0 "#PWR0146" H 5950 6600 50  0001 C CNN
+F 1 "GND" H 5955 6677 50  0000 C CNN
+F 2 "" H 5950 6850 50  0001 C CNN
+F 3 "" H 5950 6850 50  0001 C CNN
+	1    5950 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J8
+U 1 1 5CB00B84
+P 6150 6850
+F 0 "J8" H 6250 6700 50  0000 C CNN
+F 1 "3V3" H 6250 6800 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S02B-EH_1x02_P2.50mm_Horizontal" H 6150 6850 50  0001 C CNN
+F 3 "~" H 6150 6850 50  0001 C CNN
+	1    6150 6850
+	1    0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0145
+U 1 1 5CAF65C6
+P 4950 6850
+F 0 "#PWR0145" H 4950 6600 50  0001 C CNN
+F 1 "GND" H 4955 6677 50  0000 C CNN
+F 2 "" H 4950 6850 50  0001 C CNN
+F 3 "" H 4950 6850 50  0001 C CNN
+	1    4950 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+5V-power #PWR0144
+U 1 1 5CAF65C0
+P 4950 6750
+F 0 "#PWR0144" H 4950 6600 50  0001 C CNN
+F 1 "+5V" H 4965 6923 50  0000 C CNN
+F 2 "" H 4950 6750 50  0001 C CNN
+F 3 "" H 4950 6750 50  0001 C CNN
+	1    4950 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J6
+U 1 1 5CAF65B9
+P 5150 6850
+F 0 "J6" H 5250 6700 50  0000 C CNN
+F 1 "Fun0" H 5250 6800 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S02B-EH_1x02_P2.50mm_Horizontal" H 5150 6850 50  0001 C CNN
+F 3 "~" H 5150 6850 50  0001 C CNN
+	1    5150 6850
+	1    0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0143
+U 1 1 5CAEBAA9
+P 5450 6850
+F 0 "#PWR0143" H 5450 6600 50  0001 C CNN
+F 1 "GND" H 5455 6677 50  0000 C CNN
+F 2 "" H 5450 6850 50  0001 C CNN
+F 3 "" H 5450 6850 50  0001 C CNN
+	1    5450 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+5V-power #PWR0142
+U 1 1 5CAEBA35
+P 5450 6750
+F 0 "#PWR0142" H 5450 6600 50  0001 C CNN
+F 1 "+5V" H 5465 6923 50  0000 C CNN
+F 2 "" H 5450 6750 50  0001 C CNN
+F 3 "" H 5450 6750 50  0001 C CNN
+	1    5450 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J7
+U 1 1 5CAEB993
+P 5650 6850
+F 0 "J7" H 5750 6700 50  0000 C CNN
+F 1 "Fun1" H 5750 6800 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S02B-EH_1x02_P2.50mm_Horizontal" H 5650 6850 50  0001 C CNN
+F 3 "~" H 5650 6850 50  0001 C CNN
+	1    5650 6850
+	1    0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x03_Female-Connector J11
+U 1 1 5CAE0EA4
+P 4200 7100
+F 0 "J11" H 4228 7126 50  0000 L CNN
+F 1 "Servo" H 4228 7035 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_S03B-EH_1x03_P2.50mm_Horizontal" H 4200 7100 50  0001 C CNN
+F 3 "~" H 4200 7100 50  0001 C CNN
+	1    4200 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0140
+U 1 1 5CAE10EE
+P 3950 7250
+F 0 "#PWR0140" H 3950 7000 50  0001 C CNN
+F 1 "GND" H 3955 7077 50  0000 C CNN
+F 2 "" H 3950 7250 50  0001 C CNN
+F 3 "" H 3950 7250 50  0001 C CNN
+	1    3950 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 7250 3950 7000
+Wire Wire Line
+	3950 7000 4000 7000
+Wire Wire Line
+	7950 1150 8050 1150
+Wire Wire Line
+	8050 1150 8050 1250
+Connection ~ 8050 1550
+Wire Wire Line
+	8400 1350 8400 1550
+$Comp
+L MD&SubCPU-ver2.0-rescue:CP-Device C12
+U 1 1 5CB591D2
+P 2400 1900
+F 0 "C12" H 2200 2000 50  0000 L CNN
+F 1 "220uF" H 2150 1800 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 2438 1750 50  0001 C CNN
+F 3 "~" H 2400 1900 50  0001 C CNN
+	1    2400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+BATT-power #PWR0165
+U 1 1 5CB595B6
+P 2400 1750
+F 0 "#PWR0165" H 2400 1600 50  0001 C CNN
+F 1 "+BATT" H 2415 1923 50  0000 C CNN
+F 2 "" H 2400 1750 50  0001 C CNN
+F 3 "" H 2400 1750 50  0001 C CNN
+	1    2400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0166
+U 1 1 5CB59655
+P 2400 2050
+F 0 "#PWR0166" H 2400 1800 50  0001 C CNN
+F 1 "GND" H 2405 1877 50  0000 C CNN
+F 2 "" H 2400 2050 50  0001 C CNN
+F 3 "" H 2400 2050 50  0001 C CNN
+	1    2400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:SW_SPST-Switch SW2
+U 1 1 5CBB09C1
+P 7750 1150
+F 0 "SW2" H 7750 1385 50  0000 C CNN
+F 1 "ST-RST" H 7750 1294 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 7750 1150 50  0001 C CNN
+F 3 "" H 7750 1150 50  0001 C CNN
+	1    7750 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1150 7550 1550
+Connection ~ 7550 1550
+Wire Wire Line
+	7550 1550 8050 1550
+$Comp
+L MD&SubCPU-ver2.0-rescue:MountingHole-Mechanical H1
+U 1 1 5CBC6271
+P 10300 5700
+F 0 "H1" H 10400 5746 50  0000 L CNN
+F 1 "MountingHole" H 10400 5655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10300 5700 50  0001 C CNN
+F 3 "~" H 10300 5700 50  0001 C CNN
+	1    10300 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:MountingHole-Mechanical H2
+U 1 1 5CBC6333
+P 10300 5900
+F 0 "H2" H 10400 5946 50  0000 L CNN
+F 1 "MountingHole" H 10400 5855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10300 5900 50  0001 C CNN
+F 3 "~" H 10300 5900 50  0001 C CNN
+	1    10300 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:MountingHole-Mechanical H3
+U 1 1 5CBC63DF
+P 10300 6100
+F 0 "H3" H 10400 6146 50  0000 L CNN
+F 1 "MountingHole" H 10400 6055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10300 6100 50  0001 C CNN
+F 3 "~" H 10300 6100 50  0001 C CNN
+	1    10300 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:MountingHole-Mechanical H4
+U 1 1 5CBC648D
+P 10300 6300
+F 0 "H4" H 10400 6346 50  0000 L CNN
+F 1 "MountingHole" H 10400 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10300 6300 50  0001 C CNN
+F 3 "~" H 10300 6300 50  0001 C CNN
+	1    10300 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+8V-power #PWR0136
+U 1 1 5CC9D0DF
+P 3500 2000
+F 0 "#PWR0136" H 3500 1850 50  0001 C CNN
+F 1 "+8V" H 3515 2173 50  0000 C CNN
+F 2 "" H 3500 2000 50  0001 C CNN
+F 3 "" H 3500 2000 50  0001 C CNN
+	1    3500 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:PWR_FLAG-power #FLG0101
+U 1 1 5D4C6D0F
+P 10650 3850
+F 0 "#FLG0101" H 10650 3925 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 4023 50  0000 C CNN
+F 2 "" H 10650 3850 50  0001 C CNN
+F 3 "~" H 10650 3850 50  0001 C CNN
+	1    10650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R2
+U 1 1 5CA9765E
+P 8900 5100
+F 0 "R2" V 9000 5050 50  0000 L CNN
+F 1 "680" V 8900 5050 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8830 5100 50  0001 C CNN
+F 3 "~" H 8900 5100 50  0001 C CNN
+	1    8900 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 5100 9350 5200
+Connection ~ 9350 5100
+Wire Wire Line
+	9350 5000 9350 5100
+Connection ~ 9050 5100
+Wire Wire Line
+	9050 5100 9050 5200
+Wire Wire Line
+	9050 5000 9050 5100
+$Comp
+L MD&SubCPU-ver2.0-rescue:VNH5019A-Driver_Motor U1
+U 1 1 5CA8A384
+P 7350 4850
+F 0 "U1" H 7700 5950 50  0000 C CNN
+F 1 "VNH5019A" H 7700 5850 50  0000 C CNN
+F 2 "Package_SO:ST_MultiPowerSO-30" H 7350 5775 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/group2/66/b8/f5/2c/9a/66/41/c7/CD00043711/files/CD00043711.pdf/jcr:content/translations/en.CD00043711.pdf" H 6850 5850 50  0001 C CNN
+	1    7350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D2
+U 1 1 5C88D9A3
+P 9200 5000
+F 0 "D2" H 9350 4900 50  0000 R CNN
+F 1 "Blue-LED" H 9147 4883 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9200 5000 50  0001 C CNN
+F 3 "~" H 9200 5000 50  0001 C CNN
+	1    9200 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D1
+U 1 1 5C88D90A
+P 9200 5200
+F 0 "D1" H 9300 5100 50  0000 R CNN
+F 1 "Red-LED" H 9147 5083 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9200 5200 50  0001 C CNN
+F 3 "~" H 9200 5200 50  0001 C CNN
+	1    9200 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Motor_DC-Motor M1
+U 1 1 5D5878B8
+P 9100 4550
+F 0 "M1" V 8805 4500 50  0000 C CNN
+F 1 "Motor_DC" V 8896 4500 50  0000 C CNN
+F 2 "zisaku:Ultra_female" H 9100 4460 50  0001 C CNN
+F 3 "~" H 9100 4460 50  0001 C CNN
+	1    9100 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:PWR_FLAG-power #FLG0102
+U 1 1 5D657DC0
+P 10650 4100
+F 0 "#FLG0102" H 10650 4175 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 4273 50  0000 C CNN
+F 2 "" H 10650 4100 50  0001 C CNN
+F 3 "~" H 10650 4100 50  0001 C CNN
+	1    10650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:PWR_FLAG-power #FLG0103
+U 1 1 5D657FDB
+P 10650 4350
+F 0 "#FLG0103" H 10650 4425 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 4523 50  0000 C CNN
+F 2 "" H 10650 4350 50  0001 C CNN
+F 3 "~" H 10650 4350 50  0001 C CNN
+	1    10650 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:PWR_FLAG-power #FLG0104
+U 1 1 5D658272
+P 10650 4600
+F 0 "#FLG0104" H 10650 4675 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 4773 50  0000 C CNN
+F 2 "" H 10650 4600 50  0001 C CNN
+F 3 "~" H 10650 4600 50  0001 C CNN
+	1    10650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+5V-power #PWR0105
+U 1 1 5D658539
+P 10300 4600
+F 0 "#PWR0105" H 10300 4450 50  0001 C CNN
+F 1 "+5V" H 10315 4773 50  0000 C CNN
+F 2 "" H 10300 4600 50  0001 C CNN
+F 3 "" H 10300 4600 50  0001 C CNN
+	1    10300 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0106
+U 1 1 5D659E55
+P 10300 4850
+F 0 "#PWR0106" H 10300 4700 50  0001 C CNN
+F 1 "+3.3V" H 10315 5023 50  0000 C CNN
+F 2 "" H 10300 4850 50  0001 C CNN
+F 3 "" H 10300 4850 50  0001 C CNN
+	1    10300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+8V-power #PWR0107
+U 1 1 5D65A4DD
+P 10300 4350
+F 0 "#PWR0107" H 10300 4200 50  0001 C CNN
+F 1 "+8V" H 10315 4523 50  0000 C CNN
+F 2 "" H 10300 4350 50  0001 C CNN
+F 3 "" H 10300 4350 50  0001 C CNN
+	1    10300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:VCC-power #PWR0159
+U 1 1 5D65A9F2
+P 10300 4100
+F 0 "#PWR0159" H 10300 3950 50  0001 C CNN
+F 1 "VCC" H 10317 4273 50  0000 C CNN
+F 2 "" H 10300 4100 50  0001 C CNN
+F 3 "" H 10300 4100 50  0001 C CNN
+	1    10300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+BATT-power #PWR0160
+U 1 1 5D65B189
+P 10300 3850
+F 0 "#PWR0160" H 10300 3700 50  0001 C CNN
+F 1 "+BATT" H 10315 4023 50  0000 C CNN
+F 2 "" H 10300 3850 50  0001 C CNN
+F 3 "" H 10300 3850 50  0001 C CNN
+	1    10300 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0167
+U 1 1 5D65B698
+P 10650 5100
+F 0 "#PWR0167" H 10650 4850 50  0001 C CNN
+F 1 "GND" H 10655 4927 50  0000 C CNN
+F 2 "" H 10650 5100 50  0001 C CNN
+F 3 "" H 10650 5100 50  0001 C CNN
+	1    10650 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:PWR_FLAG-power #FLG0105
+U 1 1 5D67BE03
+P 10650 4850
+F 0 "#FLG0105" H 10650 4925 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 5023 50  0000 C CNN
+F 2 "" H 10650 4850 50  0001 C CNN
+F 3 "~" H 10650 4850 50  0001 C CNN
+	1    10650 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 2750 2000
+Wire Wire Line
+	2750 2150 2750 2000
+$Comp
+L MD&SubCPU-ver2.0-rescue:Polyfuse-Device F2
+U 1 1 5CB688FB
+P 3200 2000
+F 0 "F2" V 3300 1850 50  0000 L CNN
+F 1 "Polyfuse" V 3288 1955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3250 1800 50  0001 L CNN
+F 3 "~" H 3200 2000 50  0001 C CNN
+	1    3200 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3500 2000 3350 2000
+Wire Wire Line
+	3050 2000 2750 2000
+Wire Wire Line
+	2750 1750 2750 2000
+Connection ~ 2750 1750
+Wire Wire Line
+	3050 1750 2750 1750
+Wire Wire Line
+	3350 1750 3500 1750
+$Comp
+L MD&SubCPU-ver2.0-rescue:+BATT-power #PWR0139
+U 1 1 5CCAF973
+P 2750 1750
+F 0 "#PWR0139" H 2750 1600 50  0001 C CNN
+F 1 "+BATT" H 2765 1923 50  0000 C CNN
+F 2 "" H 2750 1750 50  0001 C CNN
+F 3 "" H 2750 1750 50  0001 C CNN
+	1    2750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0137
+U 1 1 5CCACE5E
+P 2750 2250
+F 0 "#PWR0137" H 2750 2000 50  0001 C CNN
+F 1 "GND" H 2755 2077 50  0000 C CNN
+F 2 "" H 2750 2250 50  0001 C CNN
+F 3 "" H 2750 2250 50  0001 C CNN
+	1    2750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x02_Female-Connector J3
+U 1 1 5CC9E6BF
+P 2950 2250
+F 0 "J3" H 3100 2150 50  0000 C CNN
+F 1 "voltmeter" H 3200 2250 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S02B-EH_1x02_P2.50mm_Horizontal" H 2950 2250 50  0001 C CNN
+F 3 "~" H 2950 2250 50  0001 C CNN
+	1    2950 2250
+	1    0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Polyfuse-Device F1
+U 1 1 5CC993C2
+P 3200 1750
+F 0 "F1" V 3300 1600 50  0000 L CNN
+F 1 "Polyfuse" V 3288 1705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3250 1550 50  0001 L CNN
+F 3 "~" H 3200 1750 50  0001 C CNN
+	1    3200 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:PWR_FLAG-power #FLG0106
+U 1 1 5D6E275C
+P 10650 5100
+F 0 "#FLG0106" H 10650 5175 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 5273 50  0000 C CNN
+F 2 "" H 10650 5100 50  0001 C CNN
+F 3 "~" H 10650 5100 50  0001 C CNN
+	1    10650 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 3850 10650 3850
+Wire Wire Line
+	10650 4100 10300 4100
+Wire Wire Line
+	10300 4350 10650 4350
+Wire Wire Line
+	10300 4600 10650 4600
+Wire Wire Line
+	10650 4850 10300 4850
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0116
+U 1 1 5D618A28
+P 2150 6750
+F 0 "#PWR0116" H 2150 6600 50  0001 C CNN
+F 1 "+3.3V" H 2200 6900 50  0000 C CNN
+F 2 "" H 2150 6750 50  0001 C CNN
+F 3 "" H 2150 6750 50  0001 C CNN
+	1    2150 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1100 7050 1050
+Wire Wire Line
+	9500 2250 10000 2250
+Wire Wire Line
+	10000 1450 10000 2250
+NoConn ~ 8400 2250
+Wire Wire Line
+	10100 1350 10100 1900
+Text Label 8050 900  3    39   ~ 0
+NRST
+Wire Wire Line
+	8050 900  8050 1150
+Text Label 8150 2050 0    39   ~ 0
+PWM
+Text Label 8150 1850 0    39   ~ 0
+Code1
+Text Label 8150 1750 0    39   ~ 0
+Code0
+Text Label 9900 1150 2    39   ~ 0
+EncoderA
+Text Label 9900 1250 2    39   ~ 0
+EncoderB
+Text Label 9900 1350 2    39   ~ 0
+VCP_Tx
+Text Label 9900 1450 2    39   ~ 0
+ENA
+Text Label 9900 1550 2    39   ~ 0
+INA
+Text Label 9900 1650 2    39   ~ 0
+CS
+Text Label 9900 1750 2    39   ~ 0
+Servo-sign
+Text Label 9900 1950 2    39   ~ 0
+led
+Text Label 9900 2050 2    39   ~ 0
+UART_TxtoPI
+Text Label 9900 2150 2    39   ~ 0
+UART_RxtoPI
+Wire Wire Line
+	9500 2050 9900 2050
+Wire Wire Line
+	9900 2150 9500 2150
+Text Label 9900 2350 2    39   ~ 0
+INB
+Text Label 9900 2450 2    39   ~ 0
+SWDIO
+Text Label 9900 2550 2    39   ~ 0
+SWCLK
+Text Label 9900 2650 2    39   ~ 0
+VCP_Rx
+Wire Wire Line
+	8150 1750 8400 1750
+Wire Wire Line
+	8150 1850 8400 1850
+Wire Wire Line
+	8150 2050 8400 2050
+Wire Wire Line
+	9500 1150 9900 1150
+Wire Wire Line
+	9500 1250 9900 1250
+Wire Wire Line
+	9500 1350 9900 1350
+Wire Wire Line
+	9500 1650 9900 1650
+Wire Wire Line
+	9500 1750 9900 1750
+Wire Wire Line
+	9500 1950 9900 1950
+Text Label 9900 2250 2    39   ~ 0
+ENB
+Wire Wire Line
+	9500 2350 9900 2350
+Wire Wire Line
+	9500 2450 9900 2450
+Wire Wire Line
+	9500 2550 9900 2550
+Wire Wire Line
+	9500 2650 9900 2650
+Text Label 7250 950  2    39   ~ 0
+buzz
+Wire Wire Line
+	7250 950  7050 950 
+Wire Wire Line
+	6350 1950 6400 1950
+Text Label 6650 2050 2    39   ~ 0
+Code0
+Text Label 6650 2150 2    39   ~ 0
+Code1
+Text Label 6650 2250 2    39   ~ 0
+Code2
+Text Label 6650 2350 2    39   ~ 0
+Code3
+Wire Wire Line
+	6350 2350 6650 2350
+Wire Wire Line
+	6350 2250 6650 2250
+Wire Wire Line
+	6350 2150 6650 2150
+Wire Wire Line
+	6350 2050 6650 2050
+Text Label 850  6950 0    39   ~ 0
+NRST
+Text Label 850  7150 0    39   ~ 0
+SWDIO
+Text Label 850  7050 0    39   ~ 0
+SWCLK
+Text Label 850  7350 0    39   ~ 0
+VCP_Rx
+Text Label 850  7250 0    39   ~ 0
+VCP_Tx
+Wire Wire Line
+	850  6950 1150 6950
+Wire Wire Line
+	850  7050 1150 7050
+Wire Wire Line
+	850  7150 1150 7150
+Wire Wire Line
+	850  7250 1150 7250
+Wire Wire Line
+	850  7350 1150 7350
+Text Label 1800 7150 0    39   ~ 0
+ST-SDA
+Connection ~ 2150 6750
+Text Label 1800 7050 0    39   ~ 0
+ST-SCL
+Text Label 1800 7350 0    39   ~ 0
+EncoderB
+Text Label 1800 7250 0    39   ~ 0
+EncoderA
+Wire Wire Line
+	2150 6850 2150 6750
+Wire Wire Line
+	2100 6950 2150 6950
+Wire Wire Line
+	2100 7400 2100 6950
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0117
+U 1 1 5D619503
+P 2100 7400
+F 0 "#PWR0117" H 2100 7150 50  0001 C CNN
+F 1 "GND" H 2105 7227 50  0000 C CNN
+F 2 "" H 2100 7400 50  0001 C CNN
+F 3 "" H 2100 7400 50  0001 C CNN
+	1    2100 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x07_Female-Connector J4
+U 1 1 5D603B7A
+P 2350 7050
+F 0 "J4" H 2378 7076 50  0000 L CNN
+F 1 "Encoder" H 2378 6985 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_S7B-EH_1x07_P2.50mm_Horizontal" H 2350 7050 50  0001 C CNN
+F 3 "~" H 2350 7050 50  0001 C CNN
+	1    2350 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 7050 2150 7050
+Wire Wire Line
+	1800 7150 2150 7150
+Wire Wire Line
+	1800 7250 2150 7250
+Wire Wire Line
+	1800 7350 2150 7350
+Text Label 2950 6950 0    39   ~ 0
+ST-SCL
+Text Label 2950 7050 0    39   ~ 0
+ST-SDA
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0118
+U 1 1 5CB915AE
+P 2900 7100
+F 0 "#PWR0118" H 2900 6850 50  0001 C CNN
+F 1 "GND" H 2905 6927 50  0000 C CNN
+F 2 "" H 2900 7100 50  0001 C CNN
+F 3 "" H 2900 7100 50  0001 C CNN
+	1    2900 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 6950 3200 6950
+Wire Wire Line
+	3200 7050 2950 7050
+Wire Wire Line
+	9900 1550 9500 1550
+Text Label 6200 4250 0    39   ~ 0
+INA
+Text Label 8350 4050 2    39   ~ 0
+ENA
+Text Label 8350 4250 2    39   ~ 0
+ENB
+Text Label 6200 4450 0    39   ~ 0
+INB
+Text Label 6200 4650 0    39   ~ 0
+PWM
+Text Label 8600 5450 2    39   ~ 0
+CS
+Text Label 8600 4550 0    39   ~ 0
+OUTB
+Text Label 9500 4550 2    39   ~ 0
+OUTA
+Text Label 8250 4750 2    39   ~ 0
+OUTA
+Text Label 8250 4950 2    39   ~ 0
+OUTB
+Text Label 5750 5300 0    39   ~ 0
+Vout
+Text Label 7250 3600 3    39   ~ 0
+Vout
+Text Label 7400 3600 3    39   ~ 0
+Vout
+Text Label 3600 7100 0    39   ~ 0
+Servo-sign
+Text Label 3600 6850 0    39   ~ 0
+Vcc-servo
+Text Label 3600 7200 0    39   ~ 0
+Vcc-servo
+Text Label 9550 5100 2    39   ~ 0
+OUTA
+Text Label 8600 5100 0    39   ~ 0
+OUTB
+Wire Wire Line
+	6350 4450 6200 4450
+Wire Wire Line
+	6200 4250 6350 4250
+Wire Wire Line
+	6200 4650 6350 4650
+Wire Wire Line
+	6250 5050 6650 5050
+Wire Wire Line
+	5750 5300 5950 5300
+Wire Wire Line
+	7250 3600 7250 3750
+Wire Wire Line
+	7400 3600 7400 3750
+Wire Wire Line
+	8100 4250 8350 4250
+Wire Wire Line
+	8200 4050 8350 4050
+Wire Wire Line
+	8250 4750 8050 4750
+Wire Wire Line
+	8050 4950 8250 4950
+Wire Wire Line
+	8500 5450 8600 5450
+Wire Wire Line
+	8600 4550 8800 4550
+Wire Wire Line
+	9300 4550 9500 4550
+Wire Wire Line
+	9350 5100 9550 5100
+Wire Wire Line
+	8600 5100 8750 5100
+Wire Wire Line
+	3600 7100 4000 7100
+Wire Wire Line
+	3600 7200 4000 7200
+Wire Wire Line
+	3600 6850 4000 6850
+Wire Wire Line
+	7150 1900 7150 1750
+Wire Wire Line
+	8150 2450 8400 2450
+Wire Wire Line
+	8150 2350 8400 2350
+Wire Wire Line
+	8150 2150 8400 2150
+Text Label 8150 2150 0    39   ~ 0
+buzz
+Text Label 8150 2350 0    39   ~ 0
+Code2
+Text Label 8150 2450 0    39   ~ 0
+Code3
+Wire Wire Line
+	8150 2650 8400 2650
+Text Label 8150 2650 0    39   ~ 0
+ST-SDA
+Wire Wire Line
+	8150 2550 8400 2550
+Text Label 8150 2550 0    39   ~ 0
+ST-SCL
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R10
+U 1 1 5CAE73BF
+P 7150 2050
+F 0 "R10" V 7050 1950 50  0000 L CNN
+F 1 "100" V 7150 2000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7080 2050 50  0001 C CNN
+F 3 "~" H 7150 2050 50  0001 C CNN
+	1    7150 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D3
+U 1 1 5CAE6BD9
+P 7150 2350
+F 0 "D3" V 7150 2500 50  0000 R CNN
+F 1 "Green-LED" V 7050 2250 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7150 2350 50  0001 C CNN
+F 3 "~" H 7150 2350 50  0001 C CNN
+	1    7150 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0126
+U 1 1 5CA963FA
+P 7150 2500
+F 0 "#PWR0126" H 7150 2250 50  0001 C CNN
+F 1 "GND" H 7155 2327 50  0000 C CNN
+F 2 "" H 7150 2500 50  0001 C CNN
+F 3 "" H 7150 2500 50  0001 C CNN
+	1    7150 2500
+	1    0    0    -1  
+$EndComp
+Text Label 7150 1750 3    39   ~ 0
+led
+Wire Notes Line
+	1250 2950 1250 1100
+Wire Notes Line
+	1250 1100 5400 1100
+Wire Notes Line
+	5400 1100 5400 2950
+Wire Notes Line
+	1250 2950 5400 2950
+Wire Wire Line
+	2450 6000 2500 6000
+Wire Wire Line
+	900  3800 1450 3800
+Wire Wire Line
+	1550 5300 1750 5300
+Wire Wire Line
+	1550 5200 1750 5200
+Wire Wire Line
+	1550 5100 1750 5100
+Wire Wire Line
+	1750 5000 1550 5000
+Wire Wire Line
+	1550 4900 1750 4900
+Wire Wire Line
+	4400 4650 4700 4650
+Wire Wire Line
+	4400 4550 4700 4550
+Wire Wire Line
+	4400 5550 4700 5550
+Wire Wire Line
+	4400 5450 4700 5450
+Text Label 4400 5550 0    39   ~ 0
+PI-SDA
+Text Label 4400 5450 0    39   ~ 0
+PI-SCL
+Text Label 4400 4550 0    39   ~ 0
+PI-SCL
+Text Label 4400 4650 0    39   ~ 0
+PI-SDA
+Text Label 3600 4200 2    39   ~ 0
+PI-SCL
+Text Label 3600 4100 2    39   ~ 0
+PI-SDA
+Text Label 900  3800 0    39   ~ 0
+UART_RxtoPI
+Text Label 900  3900 0    39   ~ 0
+UART_TxtoPI
+Text Label 1550 5300 0    39   ~ 0
+buzz
+Text Label 1550 5200 0    39   ~ 0
+Code3
+Text Label 1550 5100 0    39   ~ 0
+Code2
+Text Label 1550 5000 0    39   ~ 0
+Code1
+Text Label 1550 4900 0    39   ~ 0
+Code0
+NoConn ~ 4700 5650
+Wire Wire Line
+	4650 5350 4650 6000
+Wire Wire Line
+	4650 5350 4700 5350
+NoConn ~ 3350 3900
+NoConn ~ 3350 4400
+NoConn ~ 3350 4600
+NoConn ~ 3350 4800
+NoConn ~ 3350 4900
+NoConn ~ 3350 5000
+NoConn ~ 3350 5100
+NoConn ~ 3350 5200
+NoConn ~ 3350 5500
+NoConn ~ 1750 5400
+NoConn ~ 1750 4700
+NoConn ~ 1750 4600
+NoConn ~ 1750 4500
+NoConn ~ 1750 4300
+NoConn ~ 1750 4200
+NoConn ~ 1750 4100
+Wire Wire Line
+	4000 4050 4600 4050
+Wire Wire Line
+	4600 4050 4600 3800
+$Comp
+L MD&SubCPU-ver2.0-rescue:SW_SPST-Switch SW3
+U 1 1 5CBBBE15
+P 4400 3800
+F 0 "SW3" H 4400 4035 50  0000 C CNN
+F 1 "PI-RST" H 4400 3944 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 4400 3800 50  0001 C CNN
+F 3 "" H 4400 3800 50  0001 C CNN
+	1    4400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R22
+U 1 1 5CB9D1D7
+P 3800 3800
+F 0 "R22" V 3900 3750 50  0000 L CNN
+F 1 "100" V 3800 3750 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3730 3800 50  0001 C CNN
+F 3 "~" H 3800 3800 50  0001 C CNN
+	1    3800 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 3800 3350 3800
+Wire Wire Line
+	4000 3800 3950 3800
+Wire Wire Line
+	4000 3800 4200 3800
+Wire Wire Line
+	4650 4350 4650 4700
+Wire Wire Line
+	4700 4350 4650 4350
+Wire Wire Line
+	4550 4450 4700 4450
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0164
+U 1 1 5CD99DC9
+P 4550 4450
+F 0 "#PWR0164" H 4550 4300 50  0001 C CNN
+F 1 "+3.3V" H 4565 4623 50  0000 C CNN
+F 2 "" H 4550 4450 50  0001 C CNN
+F 3 "" H 4550 4450 50  0001 C CNN
+	1    4550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0163
+U 1 1 5CD9992A
+P 4650 4700
+F 0 "#PWR0163" H 4650 4450 50  0001 C CNN
+F 1 "GND" H 4655 4527 50  0000 C CNN
+F 2 "" H 4650 4700 50  0001 C CNN
+F 3 "" H 4650 4700 50  0001 C CNN
+	1    4650 4700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4700 5950
+NoConn ~ 4700 5850
+NoConn ~ 4700 5750
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0162
+U 1 1 5CD379DF
+P 4650 6000
+F 0 "#PWR0162" H 4650 5750 50  0001 C CNN
+F 1 "GND" H 4655 5827 50  0000 C CNN
+F 2 "" H 4650 6000 50  0001 C CNN
+F 3 "" H 4650 6000 50  0001 C CNN
+	1    4650 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0161
+U 1 1 5CD2EEEA
+P 4700 5250
+F 0 "#PWR0161" H 4700 5100 50  0001 C CNN
+F 1 "+3.3V" H 4715 5423 50  0000 C CNN
+F 2 "" H 4700 5250 50  0001 C CNN
+F 3 "" H 4700 5250 50  0001 C CNN
+	1    4700 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x08_Female-Connector J14
+U 1 1 5CD2E946
+P 4900 5550
+F 0 "J14" H 4928 5526 50  0000 L CNN
+F 1 "MPU6050" H 4928 5435 50  0000 L CNN
+F 2 "self:MPU9250-BMP280" H 4900 5550 50  0001 C CNN
+F 3 "~" H 4900 5550 50  0001 C CNN
+	1    4900 5550
+	1    0    0    -1  
+$EndComp
+Connection ~ 1300 4600
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0158
+U 1 1 5CBEB34B
+P 1300 4600
+F 0 "#PWR0158" H 1300 4350 50  0001 C CNN
+F 1 "GND" H 1305 4427 50  0000 C CNN
+F 2 "" H 1300 4600 50  0001 C CNN
+F 3 "" H 1300 4600 50  0001 C CNN
+	1    1300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 4600 1450 4550
+Wire Wire Line
+	1300 4600 1450 4600
+Wire Wire Line
+	1300 4550 1300 4600
+Wire Wire Line
+	1450 3800 1750 3800
+Connection ~ 1450 3800
+Wire Wire Line
+	1450 3950 1450 3800
+Wire Wire Line
+	1300 3900 1300 3950
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D9
+U 1 1 5CBA6EDB
+P 1300 4400
+F 0 "D9" V 1200 4500 50  0000 R CNN
+F 1 "Red-LED" H 1450 4550 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1300 4400 50  0001 C CNN
+F 3 "~" H 1300 4400 50  0001 C CNN
+	1    1300 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D10
+U 1 1 5CBB70CD
+P 1450 4400
+F 0 "D10" V 1500 4300 50  0000 R CNN
+F 1 "Blue-LED" H 1500 4300 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1450 4400 50  0001 C CNN
+F 3 "~" H 1450 4400 50  0001 C CNN
+	1    1450 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R23
+U 1 1 5CBA8997
+P 1300 4100
+F 0 "R23" V 1250 3900 50  0000 L CNN
+F 1 "100" V 1300 4050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1230 4100 50  0001 C CNN
+F 3 "~" H 1300 4100 50  0001 C CNN
+	1    1300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R24
+U 1 1 5CBA6A78
+P 1450 4100
+F 0 "R24" V 1500 3900 50  0000 L CNN
+F 1 "100" V 1450 4050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1380 4100 50  0001 C CNN
+F 3 "~" H 1450 4100 50  0001 C CNN
+	1    1450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+5V-power #PWR0108
+U 1 1 5CB65A66
+P 2400 3350
+F 0 "#PWR0108" H 2400 3200 50  0001 C CNN
+F 1 "+5V" H 2415 3523 50  0000 C CNN
+F 2 "" H 2400 3350 50  0001 C CNN
+F 3 "" H 2400 3350 50  0001 C CNN
+	1    2400 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3400 2400 3400
+Connection ~ 2400 3400
+Wire Wire Line
+	2400 3400 2450 3400
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0109
+U 1 1 5CB68C9C
+P 2700 3350
+F 0 "#PWR0109" H 2700 3200 50  0001 C CNN
+F 1 "+3.3V" H 2715 3523 50  0000 C CNN
+F 2 "" H 2700 3350 50  0001 C CNN
+F 3 "" H 2700 3350 50  0001 C CNN
+	1    2700 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3350 2400 3400
+Wire Wire Line
+	2650 3400 2700 3400
+Wire Wire Line
+	2700 3400 2700 3350
+Connection ~ 2700 3400
+Wire Wire Line
+	2700 3400 2750 3400
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0110
+U 1 1 5CB75688
+P 2500 6050
+F 0 "#PWR0110" H 2500 5800 50  0001 C CNN
+F 1 "GND" H 2505 5877 50  0000 C CNN
+F 2 "" H 2500 6050 50  0001 C CNN
+F 3 "" H 2500 6050 50  0001 C CNN
+	1    2500 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6050 2500 6000
+Connection ~ 2500 6000
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C9
+U 1 1 5CB7F27E
+P 1100 5850
+F 0 "C9" H 900 5850 50  0000 L CNN
+F 1 "0.1uF" H 850 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1100 5850 50  0001 C CNN
+F 3 "~" H 1100 5850 50  0001 C CNN
+	1    1100 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C10
+U 1 1 5CB7F284
+P 1400 5850
+F 0 "C10" H 1200 5850 50  0000 L CNN
+F 1 "0.1uF" H 1150 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1400 5850 50  0001 C CNN
+F 3 "~" H 1400 5850 50  0001 C CNN
+	1    1400 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0111
+U 1 1 5CB7F28A
+P 1100 5950
+F 0 "#PWR0111" H 1100 5700 50  0001 C CNN
+F 1 "GND" H 1105 5777 50  0000 C CNN
+F 2 "" H 1100 5950 50  0001 C CNN
+F 3 "" H 1100 5950 50  0001 C CNN
+	1    1100 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0112
+U 1 1 5CB7F290
+P 1400 5950
+F 0 "#PWR0112" H 1400 5700 50  0001 C CNN
+F 1 "GND" H 1405 5777 50  0000 C CNN
+F 2 "" H 1400 5950 50  0001 C CNN
+F 3 "" H 1400 5950 50  0001 C CNN
+	1    1400 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+5V-power #PWR0113
+U 1 1 5CB825B8
+P 1100 5750
+F 0 "#PWR0113" H 1100 5600 50  0001 C CNN
+F 1 "+5V" H 1115 5923 50  0000 C CNN
+F 2 "" H 1100 5750 50  0001 C CNN
+F 3 "" H 1100 5750 50  0001 C CNN
+	1    1100 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:+3.3V-power #PWR0114
+U 1 1 5CB82B41
+P 1400 5750
+F 0 "#PWR0114" H 1400 5600 50  0001 C CNN
+F 1 "+3.3V" H 1415 5923 50  0000 C CNN
+F 2 "" H 1400 5750 50  0001 C CNN
+F 3 "" H 1400 5750 50  0001 C CNN
+	1    1400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:R-Device R15
+U 1 1 5CBCE16F
+P 3500 4500
+F 0 "R15" V 3600 4400 50  0000 L CNN
+F 1 "100" V 3500 4450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3430 4500 50  0001 C CNN
+F 3 "~" H 3500 4500 50  0001 C CNN
+	1    3500 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:LED-Device D4
+U 1 1 5CBCE62F
+P 3800 4500
+F 0 "D4" V 3800 4650 50  0000 R CNN
+F 1 "Green-LED" V 3700 4950 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3800 4500 50  0001 C CNN
+F 3 "~" H 3800 4500 50  0001 C CNN
+	1    3800 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0115
+U 1 1 5CBCEDD7
+P 4050 4500
+F 0 "#PWR0115" H 4050 4250 50  0001 C CNN
+F 1 "GND" H 4055 4327 50  0000 C CNN
+F 2 "" H 4050 4500 50  0001 C CNN
+F 3 "" H 4050 4500 50  0001 C CNN
+	1    4050 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4500 3950 4500
+$Comp
+L MD&SubCPU-ver2.0-rescue:C_Small-Device C11
+U 1 1 5CB9C81E
+P 4000 3950
+F 0 "C11" H 4050 4050 50  0000 L CNN
+F 1 "0.1uF" H 3800 3900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4000 3950 50  0001 C CNN
+F 3 "~" H 4000 3950 50  0001 C CNN
+	1    4000 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L MD&SubCPU-ver2.0-rescue:GND-power #PWR0141
+U 1 1 5CBCE535
+P 4000 4050
+F 0 "#PWR0141" H 4000 3800 50  0001 C CNN
+F 1 "GND" H 4005 3877 50  0000 C CNN
+F 2 "" H 4000 4050 50  0001 C CNN
+F 3 "" H 4000 4050 50  0001 C CNN
+	1    4000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3850 4000 3800
+Connection ~ 4000 3800
+Connection ~ 4000 4050
+$Comp
+L MD&SubCPU-ver2.0-rescue:Conn_01x04_Female-Connector J15
+U 1 1 5CAFE36D
+P 4900 4450
+F 0 "J15" H 4928 4426 50  0000 L CNN
+F 1 "PI-I2C" H 4928 4335 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_S04B-EH_1x04_P2.50mm_Horizontal" H 4900 4450 50  0001 C CNN
+F 3 "~" H 4900 4450 50  0001 C CNN
+	1    4900 4450
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	750  3050 750  6350
+Wire Notes Line
+	750  6350 5400 6350
+Wire Notes Line
+	5400 6350 5400 3050
+Wire Notes Line
+	5400 3050 750  3050
+Wire Notes Line
+	750  6450 6450 6450
+Wire Notes Line
+	6450 6450 6450 7700
+Wire Notes Line
+	6450 7700 750  7700
+Wire Notes Line
+	750  7700 750  6450
+Wire Notes Line
+	5500 6350 5500 3250
+Wire Notes Line
+	5500 3250 9700 3250
+Wire Notes Line
+	9700 3250 9700 6350
+Wire Notes Line
+	9700 6350 5500 6350
+Wire Notes Line
+	10800 600  10800 3150
+Wire Notes Line
+	10800 3150 5500 3150
+Wire Notes Line
+	5500 3150 5500 600 
+Wire Notes Line
+	5500 600  10800 600 
+Wire Wire Line
+	3600 4200 3350 4200
+Wire Wire Line
+	3350 4100 3600 4100
+$Comp
+L MD&SubCPU-ver2.0-rescue:Raspberry_Pi_2_3-Connector J10
+U 1 1 5CB32B9A
+P 2550 4700
+F 0 "J10" H 3050 6050 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 3100 5950 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 2550 4700 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 2550 4700 50  0001 C CNN
+	1    2550 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 6000 2850 6000
+Wire Wire Line
+	2500 6000 2550 6000
+Wire Wire Line
+	2150 6000 2250 6000
+Wire Wire Line
+	900  3900 1300 3900
+Wire Wire Line
+	1300 3900 1750 3900
+Connection ~ 1300 3900
+$EndSCHEMATC

@@ -1,0 +1,8 @@
+prefix=/home/nao/catkin_actt_pc/devel
+
+Name: qt_gui_window
+Description: Description of qt_gui_window
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
