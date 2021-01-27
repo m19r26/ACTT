@@ -1,2 +1,0 @@
-hector-slam-example:mbed:rplidar_ros-master
--DCATKIN_DEVEL_PREFIX=/home/pi/catkin_auto/devel -DCMAKE_INSTALL_PREFIX=/home/pi/catkin_auto/install -G Unix Makefiles

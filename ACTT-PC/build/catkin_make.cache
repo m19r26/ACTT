@@ -1,2 +1,0 @@
-actt_pc:darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs:hector_slam:qt_gui_window
--DCATKIN_DEVEL_PREFIX=/home/nao/catkin_actt_pc/devel -DCMAKE_INSTALL_PREFIX=/home/nao/catkin_actt_pc/install -G Unix Makefiles

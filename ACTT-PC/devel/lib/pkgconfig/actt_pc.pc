@@ -1,8 +1,0 @@
-prefix=/home/nao/catkin_actt_pc/devel
-
-Name: actt_pc
-Description: Description of actt_pc
-Version: 0.0.0
-Cflags: -I/home/nao/catkin_actt_pc/src/actt_pc/include
-Libs: -L${prefix}/lib -lactt_pc
-Requires: 
