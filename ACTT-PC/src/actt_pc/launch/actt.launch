@@ -1,0 +1,34 @@
+<launch>
+   <!-- ジョイスティックからのメッセージ取得 -->
+   <node pkg="joy" name="joy_node" type="joy_node"/>
+
+   <!-- マップフォルダから作成されたマップを起動 -->
+   <arg name="map" default="$(find actt_pc)/maps/building_31.yaml"/>
+   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)"/>
+
+   <!--node pkg="map_server" name="map_server" type="map_server"/-->
+
+   <!-- ACTTモデルを起動 -->
+   <include file="$(find actt_pc)/launch/actt_model.launch"/>
+
+   <!-- LiDARデータからオドメトリ生成 -->
+   <include file="$(find actt_pc)/launch/odom_laser.launch"/>
+
+   <!-- AMCL(自己位置推定) -->
+   <include file="$(find actt_pc)/launch/localisation.launch"/>
+
+   <!-- mobe_base(移動パスプラン) -->
+   <include file="$(find actt_pc)/launch/move_base.launch"/>
+
+   <!-- メインプログラムの実行 -->
+   <node pkg="actt_pc" name="actt_pc" type="actt_auto" output="screen">
+      <rosparam command="load" file="$(find actt_pc)/params.yaml"/>
+      <param name="/use_sim_time" value="true" />
+   </node>
+
+   <!-- Hector SLAMの実行 -->
+   <include file="$(find hector_slam)/launch/hector.launch" />
+
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find actt_pc)/rviz/nav_rviz.rviz"/>
+
+</launch>

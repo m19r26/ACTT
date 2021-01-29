@@ -1,0 +1,83 @@
+# http://wiki.ros.org/teb_local_planner (ホモトピーについての論文あり)
+# http://wiki.ros.org/teb_local_planner/Tutorials/Obstacle%20Avoidance%20and%20Robot%20Footprint%20Model
+
+TebLocalPlannerROS:
+
+   odom_topic: odom #scanmatcher_frame
+
+   # 軌跡について
+   teb_autosize:  true
+   dt_ref:        0.3
+   dt_hysteresis: 0.1
+   global_plan_overwrite_orientation: true
+   allow_init_with_backwards_motion:  true
+   max_global_plan_lookahead_dist:    3.0
+   feasibility_check_no_poses:        2
+
+   # ロボットについて
+   max_vel_x:     1.0 #0.2
+   max_vel_x_backwards: 1.0 #0.2
+   max_vel_y:     0.0
+   max_vel_theta: 1.0 #0.3
+   acc_lim_x:     2.0 #1.0
+   acc_lim_theta: 1.0 #0.5
+
+   min_turning_radius:       0.59 # 0.75
+   wheelbase:                0.252 # 0.325
+   cmd_angle_instead_rotvel: True
+ 
+   footprint_model:
+      type:       "line"
+      line_start: [0.0, 0.0]
+      line_end:   [0.252, 0.0]
+
+   # 目標許容値
+   xy_goal_tolerance:  0.2
+   yaw_goal_tolerance: 0.3
+   free_goal_vel:      true
+
+   # 障害物について
+   min_obstacle_dist:         0.05  # 1.0
+   inflation_dist:            0.05   # 1.2
+   include_costmap_obstacles: true
+   costmap_obstacles_behind_robot_dist: 1.0
+   obstacle_poses_affected:   30
+   costmap_converter_plugin:  ""
+   costmap_converter_spin_thread: true
+   costmap_converter_rate:        5
+   legacy_obstacle_association:   false
+   obstacle_association_force_inclusion_factor: 1.6
+
+   # 最適化
+   no_inner_iterations:     5
+   no_outer_iterations:     4
+   optimization_activate:   true
+   optimization_verbose:    false
+   penalty_epsilon:         0.1
+   weight_max_vel_x:        2
+   weight_max_vel_theta:    1
+   weight_acc_lim_x:        1
+   weight_acc_lim_theta:    1
+   weight_kinematics_nh:    1000
+   weight_kinematics_forward_drive:  1
+   weight_kinematics_turning_radius: 1
+   weight_optimaltime:      1
+   weight_obstacle:         70
+   weight_dynamic_obstacle: 10
+   obstacle_association_force_inclusion_factor: 0.1
+
+   # ホモトピークラスプランナー
+   enable_homotopy_class_planning:  false #True
+   enable_multithreading:           true
+   simple_exploration:              false
+   max_number_classes:              4
+   selection_cost_hysteresis:       1.0
+   selection_obst_cost_scale:       1.0
+   selection_alternative_time_cost: false
+   roadmap_graph_no_samples:        15
+   roadmap_graph_area_width:        5
+   h_signature_prescaler:           0.5
+   h_signature_threshold:           0.1
+   obstacle_keypoint_offset:        0.1
+   obstacle_heading_threshold:      0.45
+   visualize_hc_graph:              true

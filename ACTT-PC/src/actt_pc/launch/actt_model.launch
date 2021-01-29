@@ -1,0 +1,8 @@
+<launch>
+   <!-- モデルファイルを開く -->
+   <arg name="actt_xacro" default="$(find actt_pc)/actt.xacro"/>
+   <param name="robot_description" command="xacro --inorder '$(arg actt_xacro)'"/>
+
+   <!-- tfを追加 -->
+   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+</launch>

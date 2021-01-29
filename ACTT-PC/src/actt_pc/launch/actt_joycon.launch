@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+   <!-- ssh上でROS MASTERやIPを共有 -->
+   <machine name="actt" address="RasPiのIPアドレス" env-loader="/home/pi/catkin_auto/devel/env.sh" user="pi" password="RasPiのpassword"/>
+
+   <!-- ACTTのコントローラ入力nodeを起動 -->
+   <node machine="actt" name="actt_joy" pkg="mbed" type="actt_joy.py"/>
+
+   <!-- ジョイスティックからのメッセージ取得 -->
+   <node pkg="joy" name="joy_node" type="joy_node"/>
+
+</launch>

@@ -1,0 +1,51 @@
+<launch>
+   <!-- ssh上でROS MASTERやIPを共有 -->
+   <machine name="actt" address="RasPiのIPアドレス" env-loader="~/catkin_auto/devel/env.sh" user="pi" password="RasPiのpassword"/>
+
+   <!-- ACTTのnodeを起動 -->
+   <node machine="actt" name="actt_joy" pkg="mbed" type="actt_joy.py"/>
+
+   <node machine="actt" name="rplidarNode" pkg="rplidar_ros" type="rplidarNode" output="screen">
+      <param name="serial_port"         type="string" value="/dev/rplidar"/>
+      <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 --> <!-- 115200 -->
+      <param name="frame_id"            type="string" value="laser"/>
+      <param name="inverted"            type="bool"   value="false"/>
+      <param name="angle_compensate"    type="bool"   value="true"/>
+   </node>
+   
+   <!-- ジョイスティックからのメッセージ取得 -->
+   <node pkg="joy" name="joy_node" type="joy_node"/>
+
+   <!--node pkg="map_server" name="map_server" type="map_server"/-->
+
+   <!-- ACTTからカメラ画像をpublish -->
+   <node machine="actt" name="frame_pub" pkg="mbed" type="frame_pub"/>
+
+   <!-- 画像を圧縮しPCにpublishする -->
+   <node name="image_republish" pkg="image_transport" type="republish" args="compressed raw">
+      <remap from="in" to="/image_raw" />
+      <remap from="out" to="/image_exp" />
+   </node>                     
+
+   <!-- ACTTモデルを起動 -->
+   <include file="$(find actt_pc)/launch/actt_model.launch"/>
+
+   <!-- メインプログラムの実行 -->
+   <node pkg="actt_pc" name="actt_pc" type="actt_auto" output="screen">
+      <rosparam command="load" file="$(find actt_pc)/params.yaml"/>
+      <param name="/use_sim_time" value="true" />
+   </node>
+
+   <!-- Hector SLAMの実行 -->
+   <include file="$(find hector_slam)/launch/hector.launch" />
+
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find actt_pc)/rviz/nav_rviz.rviz"/>
+
+   <!-- 白線検知 -->
+   <node pkg="actt_pc" name="actt_white_line_detection" type="actt_white_line_detection" />
+
+   <!-- TF -->
+   <node pkg="tf" type="static_transform_publisher" name="scanmatcher_frame_2_base_link" args="0 0 0 0 0 0 /scanmatcher_frame /base_link 100"/>
+   <node pkg="tf" type="static_transform_publisher" name="base_link_2_laser" args="0.252 0 0 0 0 0 /base_link /laser 100"/>
+
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+   <!-- マップフォルダから作成されたマップを起動 -->
+   <arg name="map" default="$(find actt_pc)/maps/building_31.yaml"/>
+   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)"/>
+
+   <!--node pkg="map_server" name="map_server" type="map_server"/-->
+</launch>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+   <!-- ssh上でROS MASTERやIPを共有 -->
+   <machine name="actt" address="RasPiのIPアドレス" env-loader="/home/pi/catkin_auto/devel/env.sh" user="pi" password="RasPiのpassword"/>
+
+   <!-- ACTTのコントローラ入力nodeを起動 -->
+   <node machine="actt" name="actt_joy" pkg="mbed" type="actt_joy.py"/>
+
+   <!-- ACTTからカメラ画像をpublish -->
+   <node machine="actt" name="frame_pub" pkg="mbed" type="frame_pub"/>
+
+   <!-- ACTTのnodeを起動 -->
+   <node machine="actt" name="rplidarNode" pkg="rplidar_ros" type="rplidarNode" output="screen">
+      <param name="serial_port"         type="string" value="/dev/rplidar"/>
+      <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 --> <!-- 115200 -->
+      <param name="frame_id"            type="string" value="laser"/>
+      <param name="inverted"            type="bool"   value="false"/>
+      <param name="angle_compensate"    type="bool"   value="true"/>
+   </node>
+                                       
+   <!-- 画像を圧縮しPCにpublishする -->
+   <node name="image_republish" pkg="image_transport" type="republish" args="compressed raw">
+      <remap from="in" to="/image_raw" />
+      <remap from="out" to="/image_exp" />
+   </node>
+
+   <!-- ジョイスティックからのメッセージ取得 -->
+   <node pkg="joy" name="joy_node" type="joy_node"/>
+
+   <!-- 白線検知 -->
+   <node name="actt_white_line_deteciton" pkg="actt_pc" type="actt_white_line_detection" />
+
+</launch>

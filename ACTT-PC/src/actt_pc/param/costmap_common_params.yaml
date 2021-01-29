@@ -1,0 +1,50 @@
+# http://wiki.ros.org/ja/navigation/Tutorials/RobotSetup
+# http://wiki.ros.org/costmap_2d/hydro/obstacles
+
+max_obstacle_height: 0.2 # センサが読み取る最大の高さ
+min_obstacle_height: 0.0 # センサが読み取る最小の高さ
+
+robot_radius: 0.3
+footprint: [[0.0, -0.085], [0.0, 0.085], [0.252, 0.085], [0.252, -0.085]] # ロボットの接地座標
+
+map_type: voxel
+
+obstacle_layer:
+   enabled:             true
+   max_obstacle_height: 0.4
+   min_obstacle_height: 0.0
+   unknown_threshold:   10
+   mark_threshold:      0
+   combination_method:  1
+   track_unknown_space: false #true
+   obstacle_range:      1.0
+   raytrace_range:      2.0
+   origin_z:            0.0
+   z_resolution:        0.2
+   z_voxels:            10
+   publish_voxel_map:   false #true
+   observation_sources: /scan
+   scan:
+      data_type:    LaserScan
+      topic:        /scan
+      marking:      true
+      clearing:     true
+      min_obstacle_height:     0.0
+      max_obstacle_height:     0.4
+      observation_persistence: 0.0
+      expected_update_rate:    0.1
+      inf_is_valid: true
+
+# http://wiki.ros.org/costmap_2d/hydro/inflation
+
+#cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
+inflation_layer: #common
+   enabled:             true
+   cost_scaling_factor: 6.0
+   inflation_radius:    0.1
+
+# http://wiki.ros.org/costmap_2d/hydro/staticmap
+
+static_layer:
+   enabled:             true
+
